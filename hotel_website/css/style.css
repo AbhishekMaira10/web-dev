@@ -6,7 +6,6 @@
 }
 
 /* Main Styling */
-
 html,
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,7 +35,7 @@ p {
   padding: 0 20px;
 }
 
-.text-primaary {
+.text-primary {
   color: #f7c08a;
 }
 
@@ -100,7 +99,7 @@ p {
   padding: 30px 0;
 }
 
-
+/* Navbar */
 #navbar {
   background: #333;
   color: #fff;
@@ -219,7 +218,7 @@ p {
 /* Testimonials */
 #testimonials {
   height: 600px;
-  background: url('../img/test-bg.jpg') no-repeat center center/cover;
+  background: url('../images/test-bg.jpg') no-repeat center center/cover;
   padding-top: 100px;
 }
 
@@ -241,6 +240,33 @@ p {
   float: left;
   margin-right: 20px;
   border-radius: 50%;
+}
+
+/* Contact Form */
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px #ddd solid;
+}
+
+#contact-form textarea {
+  height: 200px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #f7c08a;
 }
 
 /* Footer */
