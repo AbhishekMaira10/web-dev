@@ -52,3 +52,40 @@ const eightiesCompanies = companies.filter(
 
 //companies that lasted 10 years or more
 const lasted = companies.filter((company) => company.end - company.start >= 10);
+
+//map
+//create array of companies
+const companyNames = companies.map(function (company) {
+  return `${comapny.name} [${company.start} - ${company.end}]`;
+});
+
+//using arrow functions
+const companyNames2 = companies.map(
+  (company) => `${comapny.name} [${company.start} - ${company.end}]`
+);
+
+//sort
+const sortedCompanies = companies.sort(function (c1, c2) {
+  return c1.start > c2.start ? 1 : -1;
+});
+
+
+
+//reduce
+const totalYears = companies.reduce(function (total, company) {
+  return total + (company.end - company.start);
+}, 0);
+const totalYears = companies.reduce(
+  (total, company) => total + (company.end - company.start),
+  0
+);
+
+// Combine Methods
+
+const combined = ages
+  .map((age) => age * 2)
+  .filter((age) => age >= 40)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a + b, 0);
+
+console.log(combined);
