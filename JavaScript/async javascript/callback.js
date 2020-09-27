@@ -20,5 +20,5 @@ function createPost(post, callback) {
   }, 2000);
 }
 
-getPosts();
+// getPosts();
 createPost({ title: "Post three", body: "This is post three" }, getPosts);
