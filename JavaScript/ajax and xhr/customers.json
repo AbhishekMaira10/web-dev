@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "company": "123 Designs",
+    "phone": "444-555-666"
+  },
+  {
+    "id": 2,
+    "name": "Abhishek Maira",
+    "company": "Gravitrix",
+    "phone": "434-578-696"
+  },
+  {
+    "id": 3,
+    "name": "Steve Smith",
+    "company": "Hello Productions",
+    "phone": "414-555-366"
+  }
+]
