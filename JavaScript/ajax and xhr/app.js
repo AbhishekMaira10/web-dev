@@ -23,7 +23,7 @@ function loadData() {
   //Open
   xhr.open(method, url, true);
 
-  // optional - for soinners and loaders
+  // optional - for spinners and loaders
   xhr.onprogress = function () {
     console.log("READYSTATE", this.readyState);
   };
