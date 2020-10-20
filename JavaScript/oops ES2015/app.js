@@ -44,3 +44,15 @@ const customer1 = new Customer("Tom", "Smith", "9323842208", "Standard");
 
 console.log(customer1);
 console.log(customer1.greeting());
+
+
+const personPrototypes = {
+  greeting: function() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+  }
+}
+
+
+const mary = Object.create(personPrototypes);
+mary.firstName = "Mary";
+mary.lastName = "Johnson";
