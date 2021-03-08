@@ -1,24 +1,26 @@
 // Person COnstructor
 
 //Prototypes
-function Person(firstName, lastName, dob) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.birthday = new Date(dob);
+class Person {
+  constructor(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = new Date(dob);
+  }
+  // Calculate Age
+  calculateAge() {
+    const diff = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+  // Get Full Name
+  greeting() {
+    console.log(this);
+    return `Hello There ${this.firstName} ${this.lastName}`;
+  }
 }
 
-// Calculate Age
-Person.prototype.calculateAge = function () {
-  const diff = Date.now() - this.birthday.getTime();
-  const ageDate = new Date(diff);
-  return Math.abs(ageDate.getUTCFullYear() - 1970);
-};
 
-// Get Full Name
-Person.prototype.greeting = function () {
-  console.log(this);
-  return `Hello There ${this.firstName} ${this.lastName}`;
-};
 
 const abhishek = new Person("Abhishek", "Maira", "05-14-1999");
 const mary = new Person("Mary", "Johnson", "March 20 1978");
@@ -53,6 +55,6 @@ const personPrototypes = {
 }
 
 
-const mary = Object.create(personPrototypes);
+const mary2 = Object.create(personPrototypes);
 mary.firstName = "Mary";
 mary.lastName = "Johnson";
